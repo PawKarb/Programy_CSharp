@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KsiegarniaUKW2", "KsiegarniaUKW2\KsiegarniaUKW2.csproj", "{47FC390D-FD80-4271-A7FE-2B2CEFB4E4E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KsiegarniaUKW2.Tests", "KsiegarniaUKW2.Tests\KsiegarniaUKW2.Tests.csproj", "{10BA47D1-91AC-4544-A6ED-87D63DB582B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47FC390D-FD80-4271-A7FE-2B2CEFB4E4E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47FC390D-FD80-4271-A7FE-2B2CEFB4E4E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47FC390D-FD80-4271-A7FE-2B2CEFB4E4E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47FC390D-FD80-4271-A7FE-2B2CEFB4E4E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10BA47D1-91AC-4544-A6ED-87D63DB582B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10BA47D1-91AC-4544-A6ED-87D63DB582B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10BA47D1-91AC-4544-A6ED-87D63DB582B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10BA47D1-91AC-4544-A6ED-87D63DB582B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F26E59C2-B7F6-42EF-BC04-7FFDB52261E6}
+	EndGlobalSection
+EndGlobal

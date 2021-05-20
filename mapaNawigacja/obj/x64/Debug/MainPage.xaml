@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="mapaNawigacja.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    xmlns:local="using:mapaNawigacja"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="NAWIGATOR" FontSize="40" TextAlignment="Center"></TextBlock>
+            <TextBlock Text="MAPA" FontSize="20" TextAlignment="Center"></TextBlock>
+        </StackPanel>
+        <Maps:MapControl x:ConnectionId='2' x:Name="MapaNawigacja" Grid.Row="1" ZoomLevel="0" MapServiceToken="ESU9ObiGY9Twj1aMSnuB~oc26g271u-PRcwvEtXhj1g~AtRUfzVkqoTLOrtqRFxtp5A0IHEzmM0A-aP7CmRAGqyfkJnctmkHokY5hrkVWusN"></Maps:MapControl>
+        <CommandBar Grid.Row="2" IsOpen="true">
+            <AppBarButton x:ConnectionId='3' Icon="Add" Label="Powiększ"                ></AppBarButton>
+            <AppBarButton x:ConnectionId='4' Icon="Remove" Label="Zmniejsz"                ></AppBarButton>
+            <AppBarButton x:ConnectionId='5' Label="Satelita"                 >
+                <AppBarButton.Icon>
+                    <FontIcon Glyph="S" FontFamily="auto"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarSeparator></AppBarSeparator>
+            <AppBarButton x:ConnectionId='6' Icon="Globe" Label="Koordynaty"                   ></AppBarButton>
+        </CommandBar>
+    </Grid>
+</Page>
+

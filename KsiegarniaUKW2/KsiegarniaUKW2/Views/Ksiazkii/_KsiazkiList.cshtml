@@ -1,0 +1,28 @@
+﻿@model IEnumerable<KsiegarniaUKW2.Models.Ksiazka>
+@using KsiegarniaUKW2.Struktura
+
+<div id="SekcjaListaKategori">
+    <ul class="KursyTrzyKolumny MalaListaKategorii">
+        @foreach (var ksiazka in Model)
+        {
+<li>
+    <article>
+        <a class="dodajDoKoszykaLink" href="@Url.Action("DodajDoKoszyka","Koszyk", new { id = ksiazka.KsiazkaId})">
+            <img src="@Url.Content("~/Content/Images/koszyk.png")" />
+        </a>
+
+        @if (ksiazka.Hit)
+        {
+<div class="bestsellerFlag"></div>                
+        }
+    <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly","Ksiazkii", new {id = ksiazka.KsiazkaId })">
+        <!-- literowka -->
+        <img class="kurs" src="@Url.ObrazkiSciezka(ksiazka.NazwaPlikuOkladki)" />
+        <h1>
+            @ksiazka.Tytulksiazki - @ksiazka.AutorKsiazki
+        </h1>
+    </a>
+    </article>
+</li>}
+    </ul>
+    </div>

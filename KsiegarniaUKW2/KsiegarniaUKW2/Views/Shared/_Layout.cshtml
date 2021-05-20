@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div style="overflow: hidden;">
+            <a id="koszykHeaderLink" href="link">
+                Koszyk (<span id="koszyk-naglowek-ilosc-elementow">@Html.Action("PobierzIloscElementowKoszyka", "koszyk")</span>)
+                <span></span>
+            </a>
+            @Html.Partial("_LoginPartial")
+            <a id="indexHeaderLogo" href="@Url.Content("~/")">
+                <img src="@Url.Content("~/Content/Images/logo.png")" class="center" />
+            </a>
+        </div>
+    </header>
+    <div>
+               @RenderBody()
+    </div>
+
+    <footer>
+        <nav>
+            <ul>
+                <li>@Html.ActionLink("O nas", "StronyStatyczne", "Home", new { nazwa = "onas" }, null)</li>
+                <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "onas" })", style="">O nas</a></li>
+                <li><a href="link">Społeczność</a></li>
+                <li><a href="link">Opinie</a></li>
+                <li><a href="link">Pomoc</a></li>
+                <li><a href="link">Regulamin</a></li>
+                <li><a href="link">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div id="footerLogo">
+        </div>
+        <div id="footerCopyright">
+            Copyright &copy; 
+        </div>
+    </footer>
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+﻿@model IEnumerable<KsiegarniaUKW2.Models.Kategoria>
+    @using KsiegarniaUKW2.Struktura
+<nav class="KategorieVertical">
+    <ul>
+        @foreach ( var kategoria in Model)
+        {
+        <li>
+            <a href="@Url.Action("Lista","Ksiazkii", new { nazwakategori = kategoria.NazwaKategorii.ToString() })"
+               style="background-image: url(@Url.IkonykategoriiSciezka(kategoria.NazwaPlikuIkony); ">
+                @kategoria.NazwaKategorii
+            </a>
+        </li>
+        }
+    </ul>
+</nav>

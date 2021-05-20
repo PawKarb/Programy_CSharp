@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>WindowsStoreApp</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Samuraj/source/repos/KarbowskiAstro/Content/AnimRakiety.png</File>
+    <File>C:/Users/Samuraj/source/repos/KarbowskiAstro/Content/control.png</File>
+    <File>C:/Users/Samuraj/source/repos/KarbowskiAstro/Content/Kolizja.spritefont</File>
+    <File>C:/Users/Samuraj/source/repos/KarbowskiAstro/Content/KolizjaPocisk.spritefont</File>
+    <File>C:/Users/Samuraj/source/repos/KarbowskiAstro/Content/meteor.png</File>
+    <File>C:/Users/Samuraj/source/repos/KarbowskiAstro/Content/niebo.png</File>
+    <File>C:/Users/Samuraj/source/repos/KarbowskiAstro/Content/pocisk2D.png</File>
+    <File>C:/Users/Samuraj/source/repos/KarbowskiAstro/Content/rocket1.png</File>
+    <File>C:/Users/Samuraj/source/repos/KarbowskiAstro/Content/wybuch.wav</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

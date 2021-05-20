@@ -1,0 +1,99 @@
+﻿@model KsiegarniaUKW2.ViewModels.HomeViewModel
+    @using KsiegarniaUKW2.Struktura
+
+@{ 
+
+    //Layout = "~View/Shared/_Layout.cshtml"; //opcjonalnie, mozna wskazac inny schemat, domysly ustawiomy w pliku _ViwStart.cshtml
+    
+    ViewBag.Title = "Ksiegarnia UKW";
+}
+
+    <nav class="kategorieHorizontal">
+        <ul>
+        @foreach (var kategiria in Model.Kategorie)
+        {
+            <li>
+                <a href="@Url.Action("Lista","Ksiazkii", new { nazwakategori = kategiria.NazwaKategorii.ToLower()})" 
+                   style="background-image: url(@Url.IkonykategoriiSciezka(kategiria.NazwaPlikuIkony)) ">
+                   @kategiria.NazwaKategorii
+                </a>
+            </li>
+        }
+        </ul>
+        <a href="link">
+            <img id="baner" src="../Content/Images/baner.png" />
+        </a>
+    </nav>
+
+    <section>
+        <ul class="KursyTrzyKolumny duzaListaKursy">
+            <li>
+                <article>
+                    <a class="dodajDoKoszykaLink" href="link">
+                        <img src="../Content/Images/koszyk.png" />
+                    </a>
+                    <a class="ksieganiaSzczegolyLink" href="link">
+                        <div class="bestsellerFlag"></div>
+                        <img class="kurs" src="../Content/ksiegania/historiaSe.jpg" />
+                        <h1>
+                            Tutaj będzie tytuł
+                        </h1>
+                    </a>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <a class="dodajDoKoszykaLink" href="link">
+                        <img src="../Content/Images/koszyk.png" />
+                    </a>
+                    <a class="kursSzczegolyLink" href="link">
+                        <div class="bestsellerFlag"></div>
+                        <img class="kurs" src="../Content/ksiegania/jpolski.jpg" />
+                        <h1>
+                            Tutaj będzie tytuł
+                        </h1>
+                    </a>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <a class="dodajDoKoszykaLink" href="link">
+                        <img src="../Content/Images/koszyk.png" />
+                    </a>
+                    <a class="ksieganiaSzczegolyLink" href="link">
+                        <div class="bestsellerFlag"></div>
+                        <img class="kurs" src="../Content/ksiegania/wgorach.jpg" />
+                        <h1>
+                            Tutaj będzie tytuł
+                        </h1>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <ul class="KursyTrzyKolumny duzaListaKursy">
+            @foreach(var nowosc in Model.Nowosci)
+            {
+            <li>
+                <article>
+                    <a class="dodajDoKoszykaLink" href="@Url.Action("DodajDoKoszuka","Koszyk", new { id = nowosc.KsiazkaId })">
+                        <img src="../Content/Images/koszyk.png" />
+                    </a>
+                    <a class="ksieganiaSzczegolyLink" href="@Url.Action("Szczegoly","Ksiazkii", new { id = nowosc.KsiazkaId})">
+                        <div class="newFlag"></div>
+                        <img class="kurs" src="@Url.ObrazkiSciezka(nowosc.NazwaPlikuOkladki)" />
+                        <h1>
+                           @nowosc.Tytulksiazki - @nowosc.AutorKsiazki 
+                        </h1>
+                    </a>
+                </article>
+            </li>
+            }
+        </ul>
+    </section>
+
+    
+
+
