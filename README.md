@@ -1,3 +1,3 @@
 # Programy_CSharp
  
-Programy napisane w C#
+Programy napisane w C# Laby/Projekty
